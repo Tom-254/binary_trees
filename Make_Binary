@@ -1,14 +1,15 @@
 # make file for the binary trees project
 
 CC = gcc
-SRC = binary_tree_print.c 10-binary_tree_depth.c main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c
+SRC = main.c binary_tree_print.c 0-binary_tree_node.c 2-binary_tree_insert_right.c 1-binary_tree_insert_left.c
 OBJ = $(SRC:%.c=%.o)
-NAME = 10-depth
+NAME = main_out
+FILE = 14-binary_tree_balance.c
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: ${OBJ}
-	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+all: ${SRC}
+	${CC} ${CFLAGS} ${SRC} ${FILE} -o ${NAME}
 
 clean:
 	${RM} *~ ${NAME}
