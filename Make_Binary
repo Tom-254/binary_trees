@@ -4,7 +4,7 @@ CC = gcc
 SRC = main.c binary_tree_print.c 0-binary_tree_node.c 2-binary_tree_insert_right.c 1-binary_tree_insert_left.c
 OBJ = $(SRC:%.c=%.o)
 NAME = main_out
-FILE = 14-binary_tree_balance.c
+FILE = 16-binary_tree_is_perfect.c
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 

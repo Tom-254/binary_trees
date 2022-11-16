@@ -1,3 +1,8 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include "binary_trees.h"
+
 /**
  * main - Entry point
  *
