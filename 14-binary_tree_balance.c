@@ -1,21 +1,20 @@
 #include "binary_trees.h"
-
 /**
- * height - finds the height of a particular node
- * @tree: the node to find the height of
- * Return: height of the binary tree
+ * height - measures the hight of the tree
+ * @tree:pointer to the root node of the tree
+ * Return: 0 if tree is NULL else the hight
  */
 int height(const binary_tree_t *tree)
 {
-	int height_l;
-	int height_r;
+	int left, right;
 
-	if (!tree)
+	if (tree == NULL)
 		return (0);
-
-	height_l = tree->left ? 1 + height(tree->left) : 0;
-	height_r = tree->right ? 1 + height(tree->right) : 0;
-	return (height_l > height_r ? height_l : height_r);
+	left = height(tree->left);
+	right = height(tree->right);
+	if (left >= right)
+		return (left + 1);
+	return (right + 1);
 }
 
 /**
