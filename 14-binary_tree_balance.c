@@ -1,11 +1,11 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - finds the height of a particular node
+ * height - finds the height of a particular node
  * @tree: the node to find the height of
  * Return: height of the binary tree
  */
-int tree_height(const binary_tree_t *tree)
+int height(const binary_tree_t *tree)
 {
 	int height_l;
 	int height_r;
@@ -13,8 +13,8 @@ int tree_height(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	height_l = tree->left ? 1 + tree_height(tree->left) : 0;
-	height_r = tree->right ? 1 + tree_height(tree->right) : 0;
+	height_l = tree->left ? 1 + height(tree->left) : 0;
+	height_r = tree->right ? 1 + height(tree->right) : 0;
 	return (height_l > height_r ? height_l : height_r);
 }
 
@@ -28,6 +28,6 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	return (tree_height(tree->left) - tree_height(tree->right));
+	return (height(tree->left) - height(tree->right));
 
 }
