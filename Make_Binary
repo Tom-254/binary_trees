@@ -1,9 +1,9 @@
 # make file for the binary trees project
 
 CC = gcc
-SRC = binary_tree_print.c 9-binary_tree_height.c main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c
+SRC = binary_tree_print.c 10-binary_tree_depth.c main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c
 OBJ = $(SRC:%.c=%.o)
-NAME = 9-height
+NAME = 10-depth
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
