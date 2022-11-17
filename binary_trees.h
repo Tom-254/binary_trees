@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <limits.h>
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -67,5 +68,10 @@ avl_t *avl_insert(avl_t **tree, int value);
 
 /** Helper functions **/
 void binary_tree_print(const binary_tree_t *);
+void prints(const binary_tree_t *tree, void (*func)(int), size_t level);
+size_t bt_height(const binary_tree_t *tree);
+int depth(binary_tree_t * tree);
+size_t binary_tree_size(const binary_tree_t *tree);
+int checker(const binary_tree_t *tree, size_t index, size_t size);
 
 #endif
