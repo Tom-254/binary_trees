@@ -73,5 +73,6 @@ size_t bt_height(const binary_tree_t *tree);
 int depth(binary_tree_t * tree);
 size_t binary_tree_size(const binary_tree_t *tree);
 int checker(const binary_tree_t *tree, size_t index, size_t size);
+int getRightMin(bst_t *root);
 
 #endif
